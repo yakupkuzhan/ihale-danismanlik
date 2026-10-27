@@ -21,20 +21,12 @@ Kamu ihale danışmanlığı (yapım işleri) kurumsal web sitesi prototipi. Ge�
 - 360–1920 px arası 6 genişlikte yatay taşma/konsol hatası yok. Mobil menü, Esc, odak tuzağı test edildi.
 - axe-core: 10 sayfa × 2 genişlik ihlalsiz. Lighthouse: performans 99–100, erişilebilirlik 100, best practices 100.
 
-## Yayın durumu — KALAN İŞLER
-GitHub deposu: `yakupkuzhan/-ihale-danismanlik` (adında fazladan `-` var). Kod `main` dalında.
-İlk workflow çalışmasında **derleme başarılı**, **yayınlama başarısız** oldu çünkü Pages henüz etkin değildi
-("Ensure GitHub Pages has been enabled"). Kodda hata yok.
-
-Depo sahibinin yapması gerekenler (önceki oturumda API ile yapılamadı):
-1. Settings → Repository name: `ihale-danismanlik` olarak değiştir.
-2. Settings → Pages → Build and deployment → Source: **GitHub Actions**.
-
-Sonra:
-3. Workflow'u **yeni** bir çalıştırma olarak başlat (Actions → "GitHub Pages'e Yayınla" → Run workflow). Eski çalıştırmayı "Re-run" ETME: eski çalıştırma eski depo adını (`-ihale-danismanlik`) base path olarak kullanır.
-4. https://yakupkuzhan.github.io/ihale-danismanlik/ adresinde sayfaları, görselleri, stilleri ve bağlantıları doğrula.
-
-Workflow, `BASE_PATH` değerini depo adından otomatik türetir; ad değişikliği için kodda değişiklik gerekmez.
+## Yayın durumu
+GitHub deposu: `yakupkuzhan/ihale-danismanlik` (ad düzeltildi). Kod `main` dalında.
+- Depo adı düzeltildi ve Pages kaynağı "GitHub Actions" olarak etkin.
+- "GitHub Pages'e Yayınla" workflow'u #3 (manuel) ve #4 (push) çalıştırmalarında **derleme ve yayınlama başarılı**.
+- Adres: https://yakupkuzhan.github.io/ihale-danismanlik/
+- **Kalan:** canlı sitenin elle doğrulanması (sayfalar, görseller, stiller, bağlantılar). Bu bulut oturumunun ağ politikası `github.io` adresine erişimi engellediği için oturumda yapılamadı.
 
 ## Gerçek yayına geçmeden önce
 - `src/data/site.ts`: `prototype.showNotice` ve `prototype.noindex` → `false`; doğrulanmış iletişim bilgileri.
